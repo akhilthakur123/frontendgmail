@@ -8,7 +8,7 @@ const useGetAllSentEmails = () => {
     useEffect(() => {
         const fetchEmails = async () => {
             try {
-                const res = await axios.get("http://localhost:8080/api/v1/email/getallSentemails", {
+                const res = await axios.get("https://backendgmail-dcut.onrender.com/api/v1/email/getallSentemails", {
                     withCredentials: true
                 });
                 dispatch(setSentEmails(res.data.emails));

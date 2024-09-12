@@ -21,7 +21,7 @@ const Navbar = () => {
     
     const logoutHandler = async () => {
         try {
-            const res = await axios.get('http://localhost:8080/api/v1/user/logout', { withCredentials: true });
+            const res = await axios.get('https://backendgmail-dcut.onrender.com/api/v1/user/logout', { withCredentials: true });
             console.log(res);
             toast.success(res.data.message);
             dispatch(resetState());

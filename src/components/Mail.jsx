@@ -22,7 +22,7 @@ const Mail = () => {
 
     const deletehandler = async () =>{
         try {
-            const res = await axios.delete(`http://localhost:8080/api/v1/email/${params.id}`,{
+            const res = await axios.delete(`https://backendgmail-dcut.onrender.com/api/v1/email/${params.id}`,{
                 withCredentials:true
             });
             toast.success(res.data.message);
